@@ -1,0 +1,387 @@
+List of streams of Minor
+1. Air Quality Management
+2. Anthropology and Cultural Studies
+3. Applied Economics
+4. Artificial Intelligence and Machine Learning
+5. Bioprocess Engineering
+6. Climate Sciences
+7. Coastal Engineering
+8. Computational Biology
+9. Computational Hydraulics
+10. Computational Hydrodynamics
+11. Computing
+12. Economics
+13. Economics (Social and Economic Policy)
+14. Energy & Environment
+15. Floating Systems
+16. Global Politics/IR
+17. Linguistics
+18. Materials Science
+19. Mathematics
+20. Neuroscience
+21. Ocean Technology
+22. Offshore Technology
+23. Personal and Professional Development
+24. Petroleum Technology
+25. Philosophy
+26. Physics
+27. Polymers
+28. Quantum Science and Technology
+29. Soft Matter
+30. Sustainability
+31. Systems Engineering
+
+
+Air Quality Management
+CE5180 Air Pollution and Control Engineering
+CE5150 Environmental Chemistry and Microbiology
+CE5260 Models for Water and Air Quality
+CE5015 Environmental Monitoring and Data Analysis
+CE4011 Introduction to Atmospheric and Climate Sciences
+CE5971 Aerosol Science and Technology
+CE5017 Urban Transport and the Environment
+
+Anthropology and Cultural Studies
+HS4022 Introduction to Cultural Studies
+HS7550 Critical Theory in the Social Sciences
+HS6580 Indian Cultural Studies
+HS6520 Culture and development
+HS6570 Food Cultures
+HS5855 Memory, History and Literature
+
+Applied Economics
+HS2320 Economics of Industrial Organizations
+HS4770 International Trade & Finance
+HS4780 Financial Economics
+HS4330 Environment & Resource Economics
+HS6140 Production Economics: Efficiency and Productivity Analysis
+HS4300 Applied Economics
+
+Artificial Intelligence and Machine Learning
+CS5691 Pattern Recognition and Machine Learning
+CS6046 Multi-Armed Bandits
+CS6250 Memory based Reasoning in AI
+CS6300 Speech Technology
+CS6350 Computer Vision
+CS6370 Natural Language Processing
+CS6380 Artificial Intelligence
+CS6680 Planning and Constraint Satisfaction
+CS6700 Reinforcement Learning
+CS6720 Data Mining 
+CS6730 Probabilistic Graphical Models
+CS6741 Statistical Foundations of Data Science
+CS6770 Knowledge Representation and Reasoning
+CS6910 Fundamentals of Deep Learning
+CS6886 Systems Engineering for Deep Learning
+CS6852 Theory and Applications of Ontologies
+CS6011 Kernel Methods for Pattern Analysis
+CS6464 Concepts in statistical learning theory
+Note:
+This minor is open to all B.Tech./DD students except for students of
+B.Tech./DD in CSE and ID DD in Data Science.
+
+Bioprocess Engineering (Applicable for BT (BE/BS) students also)
+Core Course: BT5071 Bioreactor Design and Analysis
+At least three electives from the following list
+BT5041 Downstream Processing
+BT5210 Bioprocess Control
+BT5021 Metabolic Engineering
+BT5031 Thermodynamics in Biochemical Engineering
+BT5040 Advanced Bioprocess Technology
+BT5051 Transport Phenomena in Biological Systems
+BT5121 Bioprocess Engineering Lab II
+BT5260 Plant Cell Bioprocessing
+BT5370 Fermentation Technology
+BT5450 Data-driven Modeling and Optimization of Bioprocesses
+CH5020 Statistical Design and Analysis of Experiments
+CH5140 Process Analysis and Simulation
+CH5120 Modern Control Theory
+CH5440 Multivariate Data Analysis for Process Modeling
+CH5460 Unit Operation and Processes in Env.Engg.
+CH5520 Mathematical Methods for Chemical Engineers
+BT6240 Bioprocess Modeling and Simulation
+CH6531 Multiscale Modeling of Heterogenous Catalytic Systems
+Other relevant course after approval from Dept. of Biotechnology
+
+Climate Sciences
+CE5235 Understanding climate dynamics and its mysteries
+CE4011 Introduction to Atmospheric and Climate Sciences
+ME5127 Introduction to Atmospheric Science
+ME3620 Introduction to Energy and Environment
+CH5370 Environmental Quality Monitoring and analysis
+CE5971 Aerosol Science and Technology
+
+Coastal Engineering (Other than OE students)
+OE5800 Coastal Engineering
+OE5400 Port and Harbour Structures
+OE2054 Ocean Wave Hydrodynamics
+OE4190 Design of ocean Structures
+OE6930 Modeling of Offshore and Coastal Processes
+OE5340 Ocean Environment Policy and Coastal Zone Management
+
+Computational Biology
+BT3040 Bioinformatics
+BT3051 Data Structures and Algorithms for Biology
+BT5240 Systems Biology
+BT5340 Protein Folding and Stability
+BT5420 Computer Simulations of Biomolecular Systems
+BT6210 Statistical Mechanics in Biology
+BT6220 Theoretical Biophysics
+BT6270 Computational Neuroscience
+BT6320 Protein Interactions: Computational Techniques
+BT7210 Protein Structure and Function
+
+Computational Hydraulics
+CE5450 Applied Hydraulic Engineering
+CE6520 Simulation Modelling in Water Resources
+CE6480 Contaminant Transport Modelling
+CE5460 Ground Water Engineering
+AM5630 Foundation of Computational Fluid Dynamics
+CH2061 Computational Techniques
+CE3330 Computer methods in Civil Engineering
+CE5225 Numerical Techniques in Civil Engineering
+
+Computational Hydrodynamics (OE students only)
+OE6930 Modeling of Offshore and Coastal Processes
+OE5450 Numerical Techniques in Ocean Hydrodynamics
+OE6020 Mesh-free Methods Applied to Hydrodynamics
+OE5500 FEM Applied to Ocean Engineering
+OE4080 Analysis and Design Tools in Marine Hydrodynamics
+
+Computing
+The student is required to complete FOUR CSE Theory or Theory+Lab
+courses other than CS1100.
+This minor is open to all B.Tech./DD students except for students of
+B.Tech./DD in CSE and ID DD in Data Science.
+
+Economics
+HS3023 Microeconomics
+HS3021 Macroeconomics
+HS4021 International Economics
+HS4011 Econometrics
+HS5360 Public Economics
+HS5340 Money, Banking and Financial Markets
+
+Economics (Social and Economic Policy)
+HS4280 Economics of Social Issues
+HS3031 Technology and Public Policy
+HS6720 Economics of Human Resources
+HS3170 Development Planning and Project Appraisal
+HS4574 Health, Environment and Human Wellbeing
+HS6730 Economics of Healthcare
+HS8420 Health Policy and Planning in Developing Countries
+HS5125 Global Health and Policy
+
+Energy & Environment
+CH5013 Principles of fuel cells
+CH5023 Unconventional oil and gas resources
+CH5018 Biomass conversion processes and analysis
+CH3150 Renewable energy sources
+CH4960 The nuclear energy option
+CH6260 Carbon capture and sequestration
+CH5370 Environmental quality and monitoring
+ID5500 Battery Technology
+
+Floating Systems (Other than OE students)
+OE2054 Ocean Wave Hydrodynamics
+OE1012 Hydrostatics and stability
+OE2044 Ship Hydrodynamics
+OE2034 Ship Resistance and Propulsion
+OE3035 Motions of ships and floating structures
+OE3036 Maneuvering and control of marine vehicles
+
+Global Politics/IR
+HS2012 International Relations: Theory and Practice
+HS3022 Conflict, Reconstruction and Human Security
+HS3013/HS5080 Human Rights and Justice
+HS5930 War and Peace in West Asia
+HS3420 China in Contemporary Global Politics
+HS4014 State and Development
+HS5880 Corruption and Development
+HS6070 Democracy: Theory and Practice
+
+Linguistics
+HS3017 Introduction to Linguistics
+HS6750 Applied Linguistics
+HS5640 Advanced Linguistics
+HS3029 Principles and Parameters in Natural Language
+HS5025 Linguistic Typology
+HS3028 Language and Society in India
+HS5611 English Phonetics and Phonology
+HS7080 Philosophy of Language
+HS8370 Sociolinguistics
+
+Materials Science
+MM5680 Smart Materials
+MM5016 Polymers and Colloids: Physics and Applications
+MM5030 Materials in renewable energy technologies
+MM5410 Ceramic Science and Technology
+MM5041 Medical Materials
+MM3010 Physics of Materials
+MM3330 Non-metallic materials
+MM5001 Composite materials
+MM5010 Advanced Engineering Materials
+MM5017 Electronic materials, devices, and fabrication
+MM5003 Atomistic modeling of materials
+MM5700 Topics in Nanomaterials
+MM5040 Defects in Materials
+MM5020 Modern techniques of Materials Characterization
+MM5460 Physical Ceramics
+ID6106 Materials for energy storage and conversion
+ID6050 Chemical Physics of Modern Technical Ceramics
+MM5130 Materials under Extreme Environments
+MM5210 X-ray Diffraction Techniques
+
+Mathematics
+Students must have successfully
+completed at least 4 courses
+from the list of
+M.Sc. Mathematics (Core+Electives)
+courses offered by the department.
+
+Neuroscience
+BT5270 Principles of Neuroscience
+BT5013 Cellular and Molecular Neuroscience
+BT6270 Computational Neuroscience
+BT5180 Biological vision (or) MD3004 Physiology of the
+Sensory System– Vision, Smell, Taste and Hearing
+MD3003 Introduction to Basic and Clinical Neuroscience
+
+Ocean Technology (Other than OE students)
+OE5050 Ocean Structures and Materials
+OE2054 Ocean Wave Hydrodynamics
+OE3190 Design of Ocean Structures
+OE4300 Ocean Energy
+OE5170 Ocean Acoustics
+OE4020 Laboratory Modelling In Marine Hydrodynamics
+
+Offshore Technology (Applicable for OE students also)
+OE6200 Design of Offshore Structures
+OE6007 Pipelines and Riser Engineering
+OE6006 Design of floating offshore platforms
+OE6002 Installation of Offshore Structures
+OE5012 Deep Sea Technology
+OE5200 Dynamics of ocean structures
+
+Personal and Professional Development
+(Four courses, with at least one from each of the baskets of courses)
+Basket 1- Personal Development
+GN5001 Self-Awareness
+GN5002 Discovering Creativity
+GN5005 Nurturing Women as Leadership Potential
+GN6001 Integral Karmayoga
+GN6106 Happiness, Habits and Success
+GN6109 Fostering Enriching Relationships
+GN6120 The Competition Mindset
+ID5031 Innovation and Entrepreneurship- A MultiDisciplinary Approach
+Basket 2- Professional Development
+GN5002 Discovering Creativity
+GN5005 Nurturing Women as Leadership Potential
+GN6101 Strategies for Professional growth - Getting ready for a corporate life
+GN6110 The Purposeful Engineer
+GN6111 Engineers - Saving Lives
+GN6130 Systems Thinking for Engineers (Cultivating Wisdom)
+ID5200 Introduction of Biomimicry
+ID5101 Innovative Entrepreneur - 1 Customer Discovery
+ID5102 The Innovative Entrepreneur 2: Launching your venture
+ID5031 Innovation and Entrepreneurship- A MultiDisciplinary Approach
+
+Petroleum Technology (Applicable for OE students also)
+PE5010 Petroleum Geomechanics
+PE6030 Reservoir engineering
+PE6180 Natural Gas Engineering
+PE5030 Artificial lift methods
+PE6020 Drilling Technology
+PE6050 Exploration and Formation Evaluation of
+Oil and Gas Reservoirs
+
+Philosophy
+HS1020 Aspects of Western Philosophy
+HS2200/HS4002 Introduction to Indian Philosophy
+HS2300 Ethics
+HS1070 Logic
+HS4031 Symbolic logic
+HS4450 Introduction to European Philosophy
+HS3050 Professional Ethics (with a credit)
+HS7090 Philosophical and Hermeneutics
+HS3033 Philosophy in Literature and Films
+HS4570 Gandhian Thoughts
+HS4510 Political Philosophy
+HS7080 Philosophy of Language
+HS6130 Philosophy of Mind
+
+Physics
+PH3500/PH5820 Classical Physics
+PH3520/PH5825Quantum Physics
+Any 2 elective courses at PH5XXX level.
+
+Polymers
+CH5190 Introduction to macromolecules
+CH3160 Polymeric materials
+CH5130 Rheology of complex Materials
+CH5270 Polymers for devices
+ID6070 Mechanics of viscoelastic materials
+CH5380 Testing of Polymers
+CH6190Polymer Reaction Kinetics and Engineering
+
+Quantum Science and Technology
+Odd semester:
+PH 5840 - Quantum Computation and Quantum Information
+EE 5347 - Quantum Photonics Devices and Technology
+Even Semester (any 2):
+DA 6300 - Quantum Computing and Machine Learning
+ID 5843 - Experimental Techniques for Quantum Computation and Metrology
+EE 6502 - Optical Signal Processing and Quantum Communications
+
+Soft Matter
+CH5190 Introduction to Macromolecules
+CH5014 Interfacial Science and Engineering
+CH5011 Colloids and Surfaces
+CH5021 Molecular Simulation of Soft Matter
+CH5130 Rheology of Complex Fluids
+CH6760 Hydrodynamics of complex fluids
+
+Sustainability
+CH5023 Unconventional Oil and Gas Resources
+CE5014 Sustainable Construction
+HS5060 Technology & Sustainable Development
+MM5320 Corrosion Engineering
+HS2014 Environment and Society
+ID5070 Energy Economics
+MM5530 Hydrogen assisted Green Steelmaking
+ED5345 Powertrains and Fuels
+CH5370 Environmental Quality Monitoring and Analysis
+CE4011 Introduction to Atmospheric and Climate Sciences
+HS5502 Climate Change, Technology and Sustainable Development
+ID6106 Materials for energy storage and conversion
+CH5013 Principles of Fuel Cells
+CE4610 Water Management
+CE6215 Water Management 
+BT5460 Biotechnology for Biofuels
+CH5015 Process Safety
+CH3170 Ecological Engineering
+CH5022 Solar Photo electrochemistry
+CE6015 Solid Waste Management
+CE5825 System Dynamics Modeling for Circular Economy
+HS5760 Climate Economics
+HS5140 Transitions and Transformations to Sustainability
+CE6011 Smart Buildings and Automation
+ME6060 Fundamentals of Combustion
+CE3241 Sustainable Environment and Infrastructure Systems
+MM5019 Material Science for Sustainability
+CE3030 Water Resources Engineering
+BT5520 Biorefineries
+
+Systems Engineering
+CH5170 Process Optimization
+CH5120 Modern Control Theory
+CH5350 Applied Time-Series Analysis
+CH5230 Data-driven Modelling of Process Systems
+CH5440 Multivariate Data Analysis
+CH5470 Graph Theory & Its Applications in Process Design
+CH5019 Mathematical Foundations of Data Science
+CH5490 Integer Optimization
+CH5017 Data analysis for modelling and monitoring of reaction systems
+CH5115 Paramater and State Estimation
+EE6412 Optimal Control
+EE6432 Stochastic Control

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IITM Course Recommender</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .chat-container { max-height: calc(100vh - 200px); }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-2xl bg-white rounded-2xl shadow-2xl flex flex-col h-[90vh]">
+        <header class="bg-blue-600 text-white p-4 rounded-t-2xl shadow-md">
+            <h1 class="text-2xl font-bold text-center">AI Course Advisor</h1>
+            <p class="text-sm text-center text-blue-100">Your personal guide to IIT Madras electives</p>
+        </header>
+
+        <main id="chat-window" class="flex-1 p-6 overflow-y-auto chat-container space-y-4">
+            <!-- Chat messages will be appended here -->
+            <div class="bot-message flex gap-3">
+                <div class="bg-blue-500 text-white rounded-full h-10 w-10 flex items-center justify-center font-bold text-lg flex-shrink-0">AI</div>
+                <div class="bg-gray-200 p-4 rounded-lg rounded-tl-none">
+                    <p class="font-semibold">Hello! I'm your course advisor.</p>
+                    <p>To get started, please upload your latest linear grade card PDF.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer id="footer" class="p-4 border-t bg-gray-50 rounded-b-2xl">
+            <div id="upload-container" class="flex items-center justify-center">
+                <label for="grade-card-upload" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg cursor-pointer transition-transform transform hover:scale-105">
+                    Select Grade Card PDF
+                </label>
+                <input type="file" id="grade-card-upload" class="hidden" accept=".pdf">
+            </div>
+            <div id="chat-input-container" class="hidden flex items-center gap-3">
+                <input type="text" id="user-input" class="flex-1 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition" placeholder="e.g., 'humanities' or 'any'">
+                <button id="send-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-5 rounded-lg transition-transform transform hover:scale-105">Send</button>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const chatWindow = document.getElementById('chat-window');
+        const uploadContainer = document.getElementById('upload-container');
+        const chatInputContainer = document.getElementById('chat-input-container');
+        const fileInput = document.getElementById('grade-card-upload');
+        const userInput = document.getElementById('user-input');
+        const sendBtn = document.getElementById('send-btn');
+
+        let occupiedSlots = [];
+
+        // --- Event Listeners ---
+        fileInput.addEventListener('change', handleFileUpload);
+        sendBtn.addEventListener('click', handleUserMessage);
+        userInput.addEventListener('keyup', (event) => {
+            if (event.key === 'Enter') handleUserMessage();
+        });
+
+        // --- Core Functions ---
+        async function handleFileUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            addMessage('user', `Uploading ${file.name}...`);
+            addSpinner();
+
+            const formData = new FormData();
+            formData.append('gradeCard', file);
+
+            try {
+                const response = await fetch('/api/init_from_pdf', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                removeSpinner();
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.error || 'Failed to process PDF.');
+                }
+                
+                occupiedSlots = data.occupiedSlots;
+                displayInitialInfo(data);
+
+            } catch (error) {
+                addMessage('bot', `An error occurred: ${error.message}`);
+                removeSpinner();
+            }
+        }
+
+        async function handleUserMessage() {
+            const message = userInput.value.trim();
+            if (!message) return;
+            
+            addMessage('user', message);
+            userInput.value = '';
+            addSpinner();
+
+            try {
+                 const response = await fetch('/api/recommend_electives', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        preference: message,
+                        occupiedSlots: occupiedSlots
+                    })
+                });
+
+                removeSpinner();
+                const data = await response.json();
+                
+                if (!response.ok) {
+                    throw new Error(data.error || 'Failed to get recommendations.');
+                }
+                displayRecommendations(data.recommendations);
+
+            } catch(error) {
+                addMessage('bot', `An error occurred: ${error.message}`);
+                removeSpinner();
+            }
+        }
+
+        // --- UI Helper Functions ---
+        function displayInitialInfo(data) {
+            let mandatoryHtml = 'None';
+            if(data.mandatoryCourses.length > 0) {
+                mandatoryHtml = '<ul>' + data.mandatoryCourses.map(c => `<li class="ml-4 list-disc"><b>${c.CourseNo}</b>: ${c['Course Name']} (Slot ${c.Slot})</li>`).join('') + '</ul>';
+            }
+            const occupiedSlotsText = data.occupiedSlots.length > 0 ? data.occupiedSlots.join(', ') : 'None';
+
+            addMessage('bot', `
+                <p>Great! I've analyzed your grade card for <b>${data.studentProfile.name}</b>.</p>
+                <p class="mt-2">For your current semester (${data.studentProfile.semester}), your mandatory courses occupy slots: <b>${occupiedSlotsText}</b>.</p>
+                <p class="mt-4">Now, what type of elective are you looking for? (e.g., 'humanities', 'management', or 'any')</p>
+            `);
+            
+            // Switch to chat input
+            uploadContainer.classList.add('hidden');
+            chatInputContainer.classList.remove('hidden');
+            userInput.focus();
+        }
+
+        function displayRecommendations(recommendations) {
+             if (recommendations.length === 0) {
+                addMessage('bot', 'I couldn\'t find any electives that fit your criteria and free slots. Try a different keyword!');
+                return;
+            }
+
+            let recommendationsHtml = '<p>Based on your free slots, here are some electives I found:</p><ul class="mt-2 space-y-2">';
+            recommendations.forEach(rec => {
+                recommendationsHtml += `
+                    <li class="p-3 bg-white rounded-lg border border-gray-200">
+                        <p class="font-bold text-blue-700">${rec.CourseNo}: ${rec['Course Name']}</p>
+                        <p class="text-sm text-gray-600"><b>Slot:</b> ${rec.Slot} | <b>Credits:</b> ${rec.Credits} | <b>Prerequisites:</b> ${rec.Prerequisites}</p>
+                    </li>
+                `;
+            });
+            recommendationsHtml += '</ul><p class="mt-4">You can ask for another type of elective if you\'d like.</p>';
+            addMessage('bot', recommendationsHtml);
+        }
+
+        function addMessage(sender, text) {
+            const messageWrapper = document.createElement('div');
+            messageWrapper.className = `${sender}-message flex gap-3 ${sender === 'user' ? 'justify-end' : ''}`;
+            
+            let html = '';
+            if (sender === 'bot') {
+                 html = `
+                    <div class="bg-blue-500 text-white rounded-full h-10 w-10 flex items-center justify-center font-bold text-lg flex-shrink-0">AI</div>
+                    <div class="bg-gray-200 p-4 rounded-lg rounded-tl-none max-w-lg">${text}</div>
+                 `;
+            } else {
+                 html = `
+                    <div class="bg-blue-600 text-white p-4 rounded-lg rounded-tr-none">${text}</div>
+                 `;
+            }
+            messageWrapper.innerHTML = html;
+            chatWindow.appendChild(messageWrapper);
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+        }
+        
+        function addSpinner() {
+            const spinnerDiv = document.createElement('div');
+            spinnerDiv.id = 'spinner';
+            spinnerDiv.className = 'bot-message flex gap-3';
+            spinnerDiv.innerHTML = `
+                <div class="bg-blue-500 text-white rounded-full h-10 w-10 flex items-center justify-center font-bold text-lg flex-shrink-0">AI</div>
+                <div class="bg-gray-200 p-4 rounded-lg rounded-tl-none">
+                    <div class="flex items-center gap-2">
+                        <div class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                        <div class="w-2 h-2 bg-blue-400 rounded-full animate-pulse [animation-delay:0.2s]"></div>
+                        <div class="w-2 h-2 bg-blue-400 rounded-full animate-pulse [animation-delay:0.4s]"></div>
+                    </div>
+                </div>
+            `;
+            chatWindow.appendChild(spinnerDiv);
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+        }
+
+        function removeSpinner() {
+            const spinner = document.getElementById('spinner');
+            if (spinner) spinner.remove();
+        }
+    </script>
+</body>
+</html>
